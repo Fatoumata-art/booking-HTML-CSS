@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'IBM Plex Sans JP', sans-serif;
+    font-family: 'Raleway','IBM Plex Sans JP', sans-serif; 
 }
 
 body {
@@ -20,37 +20,37 @@ a {
 }
 
 .contenaire{
-    width: 95%;
+    width: 1400px;
     margin: 0 auto;
 }
 
-/*** nav ***/
-nav {
+/*** HEADER ***/
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav .logo img {
+header .logo img {
     max-width: 120px;
     margin-left: 15px;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     margin: 0px;
     padding: 0px;
     list-style: none;
     justify-content: flex-end;
 }
-nav ul a {
+header nav ul a {
     display: block;
     padding: 30px;
     border-top: 3px solid;
     border-color: transparent;
 }
 
-nav li a:hover,
+header nav li a:hover,
 nav li :active {
     color: #0065FC;
     border-color: #0065FC;
@@ -59,6 +59,7 @@ nav li :active {
 /*** TITRES ***/
 
 .subtitle {
+    margin-top: 15px;
     margin-bottom: 15px;
     font-size: 0.9rem;
 }
@@ -118,6 +119,7 @@ nav li :active {
     border-radius: 25px;
     margin: 10px;
     cursor: pointer;
+   
 }
 
 
@@ -140,8 +142,9 @@ nav li :active {
 }
 
 .filter-list .text {
-    padding: 0px 10px 0px 0px;
+    padding: 10px;
     font-weight: bold;
+    font-size: small;
 }
 
 
@@ -154,13 +157,14 @@ nav li :active {
 .info-icon{
     border: 1px solid #898686;
     color: blue;
-    width: 15px;
+    display: inline-flex;
     align-items: center;
-    border-radius: 100%;
-    text-align: center;
-    margin-right: 5px;
     justify-content: center;
-    padding: 4px;
+    height: 7px;
+    width: 7px;
+    padding: 7px;
+    border-radius: 100%;
+    margin-right: 10px;
     
 }
 
@@ -175,28 +179,38 @@ nav li :active {
 }
 
 /* HEBERGEMENT */
-.wrapper {
+.article {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 30px;
    
 }
 
 #hebergement{
     background-color: #F2F2F2;
-    width: 880px;
-    height: 626px;
+    width: 65%;
     border-radius: 20px;
-    flex-flow: row wrap;
+    box-sizing: border-box;
+   
     
 }
-
 .appart{
-    display: flex;
-} 
-.row{
     margin: 0 auto;
+    padding: 0 20px;
 }
+ 
+.row{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.column {
+    width: 35%;
+    margin: 10px;
+}
+
 
 #hebergement .more, h3{
     font-weight: bolder;
@@ -214,23 +228,25 @@ nav li :active {
 {
     margin-bottom: 20px;
     padding: 0;
-    width: 246px;
     border-radius: 15px;
-    height: 199px;
     overflow: hidden;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
     background-color: #fff;
-    border: 5px solid #fff;
+    border: 4px solid #fff;
     
     
 }
 
 .card-image {
-    width: 246px;
+    width: 100%;
     margin: 0;
     padding: 0;
     height: 124px;
     margin-bottom: 10px;
+}
+
+.card-text{
+    padding: 10px;
 }
 
 /*** ETOILES ***/
@@ -251,61 +267,55 @@ nav li :active {
     float: right;
 }
 
+/*** POPULAIRE ***/
 #popular{
     background-color: #F2F2F2;
-    width: 420px;
-    height: 626px;
+    width: 32%;
+    padding: 20px;
     border-radius: 20px; 
+    box-sizing: border-box;
     
 }
 
 .populaire figure img {
-    width: 137px;
-    height: 144px;
-    box-sizing: border-box;
-    border: 1px solid #FFFFFF;
-    border-radius: 20px 0px 0px 20px;
-}
-
-.populaire figure{
-    width: 335px;
-    height: 140px;
-    display: flex;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-.populaire figcaption{
-    padding: 8px;
-}
-.activity-appart{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.populaire .card .stars{
-    margin-top: 50px;
-}
-
-
-/*** ACTIVITY ***/
-#activity h3, h1{
-    margin: 20px 20px 20px 0px;
-    padding: 0;
+    width: 45%;
+    height: 130px;
     
 }
 
+.populaire figure{
+    display: flex;
+}
+.populaire .card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+/*** ACTIVITÉS MARSEILLE ***/
+#activity {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+#activity h3 {
+    margin-top: 45px;
+}
+#activity .activity-appart{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.activity-column{
+    width: 24%;
+}
 #activity .card{
     border: none;
-    width: 302px;
-    height: 445px;
-   margin: 10px;
-   margin-bottom: 50px;
-   font-weight: bold;
-} 
-
-#activity .card p{
-    padding-left: 20px;
-
 }
 
 .card:hover{
@@ -316,10 +326,9 @@ nav li :active {
 }
 
 #activity figure img{
-    height: 409px;
-    width: 302px;
+    height: 255px;
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .title{
@@ -356,8 +365,15 @@ footer{
 
 /* RESPNSIVE MOBILE */
 @media screen and (max-width: 768px) {
+    .contenaire:first-child {
+        padding: 25px 0px 0px 0px;
+        margin-bottom: 30px;
+    }
    .contenaire {
-    margin: 0px 10px 0px 10px;}
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0px;
+}
     .subtitle, ul{
         font-size: 1rem;
     }
@@ -367,28 +383,26 @@ footer{
         display: inline;
         margin: 2rem;
     }
-   /* .logo{
-         margin: -10px 0px 0px -180px; 
-    }*/
-    nav {
+  
+    header {
         flex-direction: column;
     }
 
-    nav {
+    header nav{
         display: flex;
         justify-content: flex-start;
         width: 100%;
     }
 
-    nav ul {
+    header nav ul {
         width: 100%;
     }
 
-    nav ul li {
+    header ul li {
         width: 50%;
     }
 
-    nav ul a {
+    header nav ul a {
         border-top: transparent;
         border-bottom: 3px solid #DEEBFF;
         padding: 20px;
@@ -427,11 +441,19 @@ footer{
     .filter-case{
     flex-wrap: wrap;
     font-size: small;
-    margin: auto;
+    margin: 10px;
     }
     
-    .filter-case :first-child {
-        align-self: center;
+    .filter-list{
+        width: 44%;
+        margin: 5px;
+    }
+    .filter-list .text{
+        padding: 0;
+        font-size: smaller;
+    }
+    .filter-list .icon{
+        font-size: 1rem;
     }
     .filter {
         display: block;
@@ -439,7 +461,7 @@ footer{
     .info p{
         margin-top: 0px;
     }
-    .wrapper {
+    .article {
         flex-direction: column-reverse;
           
     }
@@ -448,15 +470,24 @@ footer{
         width: 100%;
     }
     #hebergement .row{
+        flex-direction: column;
         align-self: center;
     }
+    #hebergement .column{
+        width: 100%;
+    }
     #hebergement .card{
-        width: 333px;
+       
+        margin: auto;
+        margin-bottom: 20px;
     }
     #hebergement .card-image{
         width: 100%;
     }
-    aside{
+    .more{
+        display: none;
+    }
+    aside {
         background-color: #F2F2F2;
     
     }
@@ -496,26 +527,29 @@ footer{
         flex-direction: column;
     
     }
-    #activity .card{
-        height: 190px;
-        margin: auto;
-        margin-bottom: 20px;
-        width: 333px;
-    } 
+    .column{
+        align-self: center;
+    }
+    /* #activity h3, h1, .subtitle, form, .info{
+        margin: 20px;
+        padding: 0;
+        
+    } */
+    .activity-column{
+        width: 90%;
+        align-self: center;
+    }
+     
     #activity .card-image{
         height: 140px;
-        width: 100%;
+        
     } 
     .activity-appart{
         flex-direction: column;
+        align-self: center;
 
     }
-    .activity-appart .card{
-        align-self: center;
-        height: 190px;
-        
-    } 
-
+    
     footer {
         flex-direction: column;
         
@@ -532,94 +566,97 @@ footer{
     
 }
 
-/* RESPNSIVE TABLETTE */
+@media screen and (max-width: 280px){
+    h1 {
+        font-size: 120%;
+    }
+
+    h3 {
+        font-size: 120%;
+    }
+
+    .search-input{
+        width: 50%;
+        font-size: 100%;
+    }
+    
+
+}
+
+/* RESP0NSIVE TABLETTE */
 @media screen and (min-width: 769px ) and (max-width: 993px) {
     .contenaire{
-        margin: 0 30px 0 30px;
+        width: 100%;   
+        box-sizing: border-box;
+        padding: 0px;
         
+      }
+      header{
+        padding: 25px 0px 0px 0px;
+        margin-bottom: 30px;
+    
       }
 
       .filter-case{
         flex-wrap: nowrap;
         font-size: small;
         }
-      .wrapper {
+      .article {
         flex-direction: column;
-          
+          justify-content: space-evenly;
     } 
     #hebergement, #popular {
+        width: 100%; 
+        margin-bottom: 20px; 
+        box-sizing: border-box;
         
-        margin-bottom:  40px;
+    }
+    #hebergement .card{
+        width: 80%;
     }
     #popular{
         height: 278px;
-        
-         width: 880px;  
+        padding: 20px;   
     }
     .populaire{
         display: flex;
     }
-    .populaire .card{
-        width: 260px;
-        margin: 10px;
-       
+    #popular .card{
+        width: 90%;   
+    }
+    .populaire a{
+        width: 33%;
     }
     .populaire figure img{
-        width: 110px;
+        width: 35%;
+    }
+    .populaire figcaption{
+        width: 120px;
+       
+    }
+    .populaire .card .stars {
+       
+       padding: 0;
     }
 
+
+    #activity {
+        padding: 0px 25px;
+    }
     
-    #activity .card{
-        height: 275px;
-        margin: auto;
-        margin-bottom: 20px;
-        width: 185px;
-    } 
-    #activity .card-image{
-        height: 220px;
+    footer {
         width: 100%;
+        align-items: flex-start;
+        padding-left: 25px;
     }
-    
-    footer{
-        padding: 35px 50px;
-    }
-    .footer-items{
-        margin-left: 60px;
+
+    .footer-items {
+        flex-direction: column;
     }
         
 } 
 
-@media screen and (min-width: 993px ) and (max-width: 1400px) {
-    .contenaire{
-        
-    }
-    .wrapper {
-       
-        justify-content: space-between;
-    }
-    #hebergement{
-        width: 850px;
-    }
-    #hebergement .card{
-        width: 80%;
-        font-size: small;
-        
-    }
-    #popular{
-        width: 350px;
-        margin: 0 auto;
-    }
-    #popular .card{
-        width: 80%;
-        font-size: small;
-        margin: auto;
-        margin-bottom: 20px;
-    }
-    .appart{
-        justify-content: center;
-    }
 
-}
     
 
 
